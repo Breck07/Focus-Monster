@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Focus Monster v3.19</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Focus Monster</h1>
+
+  <img
+    id="monsterImage"
+    class="centered"
+    src="images_forfm/Idle.png"
+    alt="Focus Monster"
+    width="300"
+  />
+
+  <input
+    id="taskInput"
+    type="text"
+    placeholder="Enter a Task..."
+    autocomplete="off"
+  />
+  <button id="addTask">Add Your Task</button>
+
+  <ul id="taskList"></ul>
+
+  <!-- Hyperfocus Button moved to bottom right by CSS -->
+
+  <!-- Hyperfocus Timer -->
+  <div id="hyperfocusTimer" style="display:none;">
+    <p>Time left: <span id="timerCountdown">05:00</span></p>
+    <div style="width: 100%; background: #ccc; height: 10px; margin-top: 5px;">
+      <div id="progressBar" style="width: 0%; height: 100%; background: cyan; border-radius: 10px;"></div>
+    </div>
+  </div>
+
+  <!-- Reward Modal -->
+  <div id="rewardModal">
+    <div class="modal-content">
+      <h2>🎯 Hyperfocus Complete!</h2>
+      <p>You stayed focused for 5 full minutes!</p>
+      <p>+20 Bonus XP 🧠</p>
+      <button id="closeRewardBtn">Awesome!</button>
+    </div>
+  </div>
+
+  <!-- Stats Display -->
+  <div class="stats">
+    <div class="stat-bubble">Monster HP: <span id="monsterHP">100</span></div>
+    <div class="stat-bubble">Your XP: <span id="playerXP">0</span></div>
+    <div class="stat-bubble">Distractions: <span id="distractions">0</span></div>
+  </div>
+
+  <button id="hyperfocusBtn">Start Hyperfocus Mode</button>
+
+  <script src="index.js"></script>
+</body>
+</html>
+
+
+
